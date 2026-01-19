@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yondr Droid | AI-ассистенты и разработка ботов</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2L28.1244 9V23L16 30L3.87564 23V9L16 2Z' stroke='%2300f2ff' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='13' y='13' width='6' height='6' rx='1' fill='%2300f2ff'%3E%3Canimate attributeName='opacity' values='1;0.4;1' dur='2s' repeatCount='indefinite' /%3E%3C/rect%3E%3Cpath d='M16 2V8M16 24V30M28 9L23 12M9 20L4 23M28 23L23 20M9 12L4 9' stroke='%2300f2ff' opacity='0.4' stroke-width='1.5'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -16,7 +22,17 @@
     </main>
 
     <load src="./partials/footer.html" />
-
+    <div id="cookie-popup" class="cookie-popup">
+      <div class="cookie-popup__content">
+          <div class="cookie-popup__icon">
+              <i data-lucide="cookie"></i>
+          </div>
+          <div class="cookie-popup__text">
+              Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+          </div>
+          <button id="cookie-accept" class="btn btn--primary btn--sm">Принять</button>
+      </div>
+  </div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
