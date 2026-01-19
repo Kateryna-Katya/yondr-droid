@@ -1,56 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/yondr-droid/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/yondr-droid/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/yondr-droid/assets/styles-guStct1H.css">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yondr Droid | AI-ассистенты и разработка ботов</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2L28.1244 9V23L16 30L3.87564 23V9L16 2Z' stroke='%2300f2ff' stroke-width='2' stroke-linejoin='round'/%3E%3Crect x='13' y='13' width='6' height='6' rx='1' fill='%2300f2ff'%3E%3Canimate attributeName='opacity' values='1;0.4;1' dur='2s' repeatCount='indefinite' /%3E%3C/rect%3E%3Cpath d='M16 2V8M16 24V30M28 9L23 12M9 20L4 23M28 23L23 20M9 12L4 9' stroke='%2300f2ff' opacity='0.4' stroke-width='1.5'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" crossorigin src="/yondr-droid/assets/main-DTW7rvD9.js"></script>
+    <link rel="stylesheet" crossorigin href="/yondr-droid/assets/main-BKHW8zz7.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="./#hero" class="logo">
+          <span class="logo__icon"></span>
+          <span class="logo__text">Yondr-Droid</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="nav">
+          <ul class="nav__list">
+              <li><a href="./#hero" class="nav__link active">Главная</a></li>
+              <li><a href="./#tech" class="nav__link">Технологии</a></li>
+              <li><a href="./#benefits" class="nav__link">Преимущества</a></li>
+              <li><a href="./#blog" class="nav__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <a href="./#contact" class="btn btn--primary header__btn">Начать</a>
+
+      <button class="burger" aria-label="Menu">
+          <span></span>
+      </button>
   </div>
 </header>
-
+<div class="menu-overlay"></div>
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+  <div class="hero__bg">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+  </div>
+
+  <div class="container hero__container">
+      <div class="hero__content">
+          <div class="hero__badge reveal">Технология нового поколения</div>
+          <h1 class="hero__title reveal">
+              AI-инструменты для <span class="text-gradient">реальных задач</span>
+          </h1>
+          <p class="hero__desc reveal">
+              От простых чат-ботов до сложных AI-ассистентов. Мы создаем решения, которые меняют правила игры и расширяют горизонты вашего проекта.
+          </p>
+          <div class="hero__actions reveal">
+              <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+              <a href="#tech" class="btn btn--outline">Узнать детали</a>
+          </div>
+      </div>
+
+      <div class="hero__visual reveal">
+          <div class="hero__card">
+              <div class="hero__card-header">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+              <div class="hero__card-body">
+                  <div class="skeleton-line short"></div>
+                  <div class="skeleton-line"></div>
+                  <div class="skeleton-line medium"></div>
+                  <div class="hero__card-ai">
+                      <i data-lucide="bot"></i>
+                      <span>Yondr Droid: Платформа уже доступна в Европе</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="tech" class="tech">
+  <div class="container">
+      <div class="tech__header reveal">
+          <h2 class="tech__title">Технологии, которые <span class="text-gradient">работают на вас</span></h2>
+          <p class="tech__subtitle">Передовая цифровая инфраструктура для автоматизации вашего бизнеса и личных проектов.</p>
+      </div>
+
+      <div class="tech__grid">
+          <div class="tech__card reveal">
+              <div class="tech__icon">
+                  <i data-lucide="message-square-code"></i>
+              </div>
+              <h3 class="tech__card-title">Простые чат-боты</h3>
+              <p class="tech__card-text">Быстрый и лёгкий старт в автоматизации. Создаем скрипты для Telegram и WhatsApp, которые экономят ваше время.</p>
+              <ul class="tech__card-list">
+                  <li><i data-lucide="check-circle-2"></i> Пошаговый путь, понятный каждому</li>
+                  <li><i data-lucide="check-circle-2"></i> Подключение занимает 2 минуты</li>
+              </ul>
+          </div>
+
+          <div class="tech__card tech__card--featured reveal">
+              <div class="tech__icon">
+                  <i data-lucide="brain-circuit"></i>
+              </div>
+              <h3 class="tech__card-title">AI-Ассистенты</h3>
+              <h4 class="tech__card-badge">Решения нового поколения</h4>
+              <p class="tech__card-text">Интеграция GPT и нейросетей в ваши рабочие процессы. Технологии, которые думают и обучаются вместе с вами.</p>
+              <ul class="tech__card-list">
+                  <li><i data-lucide="check-circle-2"></i> Методологии, доказавшие эффективность</li>
+                  <li><i data-lucide="check-circle-2"></i> Инновационная архитектура</li>
+              </ul>
+          </div>
+
+          <div class="tech__card reveal">
+              <div class="tech__icon">
+                  <i data-lucide="layers"></i>
+              </div>
+              <h3 class="tech__card-title">Инфраструктура</h3>
+              <p class="tech__card-text">Масштабируемые решения для сложных систем. Мы строим фундамент, на котором растут ваши самые смелые идеи.</p>
+              <ul class="tech__card-list">
+                  <li><i data-lucide="check-circle-2"></i> Оценить перспективы проекта</li>
+                  <li><i data-lucide="check-circle-2"></i> Экспертная поддержка на всех этапах</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="benefits" class="benefits">
+  <div class="container">
+      <div class="benefits__header reveal">
+          <h2 class="benefits__title">Переосмыслите подход <span class="text-gradient">к развитию</span></h2>
+          <p class="benefits__subtitle">Мы объединили лучшие практики и инновации, чтобы вы могли открыть новые возможности уже сегодня.</p>
+      </div>
+
+      <div class="benefits__grid">
+          <div class="bento bento--main reveal">
+              <div class="bento__content">
+                  <div class="bento__tag">Программа года</div>
+                  <h3 class="bento__title">Программа пассивного дохода</h3>
+                  <p class="bento__text">Технология для пассивного дохода на базе AI-алгоритмов. Настройте систему один раз и наблюдайте, как ваши идеи работают на вас 24/7.</p>
+                  <a href="#contact" class="btn btn--primary">Получить больше информации</a>
+              </div>
+              <div class="bento__visual">
+                  <div class="bento__chart">
+                      <div class="bar" style="height: 40%"></div>
+                      <div class="bar" style="height: 70%"></div>
+                      <div class="bar" style="height: 55%"></div>
+                      <div class="bar" style="height: 90%"></div>
+                      <div class="bar" style="height: 100%"></div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="bento bento--support reveal">
+              <div class="bento__icon"><i data-lucide="shield-check"></i></div>
+              <h3 class="bento__title">Экспертная поддержка</h3>
+              <p class="bento__text">Поддержка по всем вопросам на всех этапах интеграции. Наши специалисты помогут адаптировать решение под ваши задачи.</p>
+          </div>
+
+          <div class="bento bento--access reveal">
+              <div class="bento__icon"><i data-lucide="globe"></i></div>
+              <h3 class="bento__title">Доступ открыт</h3>
+              <p class="bento__text">Платформа уже доступна в Европе и странах ЕС.</p>
+          </div>
+
+          <div class="bento bento--practice reveal">
+              <div class="bento__content">
+                  <h3 class="bento__title">Практики сегодня</h3>
+                  <p class="bento__text">Методологии, доказавшие свою эффективность в реальных кейсах. Примените их прямо сейчас.</p>
+              </div>
+              <div class="bento__status">
+                  <span class="pulse"></span> Active in UK
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section id="blog" class="blog">
+  <div class="container">
+      <div class="blog__header reveal">
+          <div class="blog__pretitle">Образовательная часть</div>
+          <h2 class="blog__title">Стратегия роста на базе <span class="text-gradient">инноваций</span></h2>
+      </div>
+
+      <div class="blog__grid">
+          <article class="blog-card reveal">
+              <div class="blog-card__image">
+                  <img src="/yondr-droid/assets/one-C87Nm25e.jpg" alt="AI Startup">
+                  <span class="blog-card__category">Старт</span>
+              </div>
+              <div class="blog-card__content">
+                  <div class="blog-card__meta">
+                      <span><i data-lucide="clock"></i> 2 мин чтения</span>
+                  </div>
+                  <h3 class="blog-card__title">Как запустить бота за 2 минуты без опыта</h3>
+                  <p class="blog-card__text">Пошаговый путь, понятный каждому. Мы разбираем, как современные AI-инструменты позволяют автоматизировать рутину в несколько кликов.</p>
+                  <a href="#contact" class="blog-card__link">Читать далее <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card reveal">
+              <div class="blog-card__image">
+                  <img src="/yondr-droid/assets/two-DAlyrZrc.jpg" alt="Future AI">
+                  <span class="blog-card__category">AI-Будущее</span>
+              </div>
+              <div class="blog-card__content">
+                  <div class="blog-card__meta">
+                      <span><i data-lucide="clock"></i> 5 мин чтения</span>
+                  </div>
+                  <h3 class="blog-card__title">AI-ассистенты: решения, которые меняют правила игры</h3>
+                  <p class="blog-card__text">Переосмыслите подход к развитию. Исследуем технологии нового поколения и их влияние на продуктивность в 2026 году.</p>
+                  <a href="#contact" class="blog-card__link">Читать далее <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+
+          <article class="blog-card reveal">
+              <div class="blog-card__image">
+                  <img src="/yondr-droid/assets/three-D1bAUwso.jpg" alt="Revenue">
+                  <span class="blog-card__category">Выгода</span>
+              </div>
+              <div class="blog-card__content">
+                  <div class="blog-card__meta">
+                      <span><i data-lucide="clock"></i> 4 мин чтения</span>
+                  </div>
+                  <h3 class="blog-card__title">Технология для пассивного дохода: миф или реальность?</h3>
+                  <p class="blog-card__text">Практики, применимые уже сегодня. Разбираем реальные кейсы интеграции ботов в финансовые экосистемы.</p>
+                  <a href="#contact" class="blog-card__link">Читать далее <i data-lucide="arrow-right"></i></a>
+              </div>
+          </article>
+      </div>
+
+      <div class="blog__footer reveal">
+          <p>Хотите узнать больше? Подпишитесь на наши обновления.</p>
+          <a href="#contact" class="btn btn--outline">Запросить доступ к базе знаний</a>
+      </div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="container">
+      <div class="contact__grid">
+          <div class="contact__info reveal">
+              <h2 class="contact__title">Запросить <span class="text-gradient">доступ</span></h2>
+              <p class="contact__text">Оставьте заявку на бесплатную консультацию по всем вопросам. Наш эксперт свяжется с вами, чтобы оценить перспективы вашего проекта.</p>
+
+              <div class="contact__features">
+                  <div class="contact__feat-item">
+                      <i data-lucide="shield-check"></i>
+                      <span>Гарантия конфиденциальности данных</span>
+                  </div>
+                  <div class="contact__feat-item">
+                      <i data-lucide="zap"></i>
+                      <span>Ответ в течение 15 минут</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="contact__form-wrapper reveal">
+              <form id="ai-contact-form" class="form">
+                  <div class="form__group">
+                      <label for="user_name" class="form__label">Ваше имя</label>
+                      <input type="text" id="user_name" class="form__input" placeholder="Александр" required>
+                  </div>
+
+                  <div class="form__row">
+                      <div class="form__group">
+                          <label for="user_email" class="form__label">Email</label>
+                          <input type="email" id="user_email" class="form__input" placeholder="hello@mail.com" required>
+                      </div>
+                      <div class="form__group">
+                          <label for="user_phone" class="form__label">Телефон</label>
+                          <input type="tel" id="user_phone" class="form__input" placeholder="Цифры без пробелов" required>
+                      </div>
+                  </div>
+
+                  <div class="form__group">
+                      <label class="form__label">Защита от спама: <span id="captcha-question">...</span></label>
+                      <input type="text" id="captcha_answer" class="form__input" placeholder="Ваш ответ" required>
+                  </div>
+
+                  <div class="form__group checkbox">
+                      <input type="checkbox" id="policy" required>
+                      <label for="policy">Согласен с <a href="./personal-data-policy.html">политикой обработки данных</a></label>
+                  </div>
+
+                  <button type="submit" class="btn btn--primary form__submit">
+                      <span>Отправить запрос</span>
+                      <i data-lucide="send"></i>
+                  </button>
+
+                  <div id="form-success" class="form__message form__message--success">
+                      <i data-lucide="check-circle"></i>
+                      <div>
+                          <strong>Успешно отправлено!</strong>
+                          <p>Мы скоро свяжемся с вами.</p>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+      <div class="footer__brand">
+          <a href="./#hero" class="logo logo--footer">
+              <span class="logo__text">Yondr-Droid</span>
+          </a>
+          <p class="footer__desc">Переосмыслите подход к развитию через инновационные AI-решения.</p>
+      </div>
+
+      <div class="footer__nav">
+          <h4 class="footer__title">Навигация</h4>
+          <ul class="footer__links">
+              <li><a href="./#tech">Технологии</a></li>
+              <li><a href="./#benefits">Преимущества</a></li>
+              <li><a href="./#blog">Блог</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__legal">
+          <h4 class="footer__title">Документы</h4>
+          <ul class="footer__links">
+              <li><a href="./privacy.html">Privacy Policy</a></li>
+              <li><a href="./cookies.html">Cookies</a></li>
+              <li><a href="./terms.html">Terms of Service</a></li>
+              <li><a href="./return.html">Return Policy</a></li>
+              <li><a href="./disclaimer.html">Disclaimer</a></li>
+              <li><a href="./personal-data-policy.html">Data Policy</a></li>
+          </ul>
+      </div>
+
+      <div class="footer__contacts">
+          <h4 class="footer__title">Контакты</h4>
+          <ul class="footer__info">
+              <li>
+                  <i data-lucide="map-pin"></i>
+                  <span>71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, England</span>
+              </li>
+              <li>
+                  <i data-lucide="phone"></i>
+                  <span>+44 20 7946 0958</span>
+              </li>
+              <li>
+                  <i data-lucide="mail"></i>
+                  <a href="mailto:hello@yondr-droid.blog">hello@yondr-droid.blog</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="container footer__bottom">
+      <p>&copy; 2026 Yondr-Droid. Платформа уже доступна в Европе.</p>
   </div>
 </footer>
-
-
+    <div id="cookie-popup" class="cookie-popup">
+      <div class="cookie-popup__content">
+          <div class="cookie-popup__icon">
+              <i data-lucide="cookie"></i>
+          </div>
+          <div class="cookie-popup__text">
+              Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+          </div>
+          <button id="cookie-accept" class="btn btn--primary btn--sm">Принять</button>
+      </div>
+  </div>
   </body>
 </html>
